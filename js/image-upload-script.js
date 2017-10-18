@@ -29,9 +29,10 @@ jQuery(function($)
         file_frame.on('select', function ()
         {
             attachment = file_frame.state().get('selection').toJSON();
-            rowId = $this.attr('data-rowid');
+            var rowId = $this.attr('data-rowid');
 
-            $('#' + $this.attr('data-field')).val(attachment[0]['url']);
+            $('#' + rowId).val(attachment[0]['id']);
+            $('.prevwImage.' + rowId).attr('src', attachment[0]['url']);
         });
 
         /*/ Finally, open the modal*/
