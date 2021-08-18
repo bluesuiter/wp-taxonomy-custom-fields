@@ -1,3 +1,3 @@
 # wp-taxonomy-custom-fields
 
-Add custom field's to the Taxonomies.
+A WordPress plugin for adding featured image field.
