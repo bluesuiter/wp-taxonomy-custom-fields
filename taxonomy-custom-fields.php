@@ -29,8 +29,9 @@ if(file_exists(plugin_dir_path(__FILE__).'helper.php'))
 }
 
 _bsigLodFile(plugin_dir_path(__FILE__).'wtcf-admin-interface.php');
+$site_taxonomies = array_column(get_object_taxonomies('post', 'name'), 'name');
 $wtcfAdmin = new wtcfAdmin();
-$wtcfAdmin->taxonomyList = ['travel-locations-category', 'category'];
+$wtcfAdmin->taxonomyList = $site_taxonomies;
 $wtcfAdmin->_wtcfTrigger();
 
 function _wtcfScript()
